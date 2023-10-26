@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SIVASREE - PORTFOLIO</title>
+    <style>
+        body {
+            font-family: TimesNewRoman,Cambria;
+            margin: 0;
+            padding: 0;
+            background-color: cyan;
+        }
+        
+        header {
+            background-color: chartreuse;
+            color: deepskyblue;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative; 
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+        
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 75%;
+            object-fit: cover;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+        } 
+        
+        nav {
+            background-color: rgb(255, 239, 20);
+            color: darkseagreen;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type:none;
+            padding: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(255, 0, 0);
+        }
+
+        .section-content {
+            background-color: rgb(0, 255, 213);
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+        }
+
+        .download-button {
+            background-color: rgb(255, 30, 0);
+            color: slateblue;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .download-button:hover {
+            background-color: gold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: darkmagenta;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: lower-roman;
+            padding-left: 20px;
+        }
+        </style>
+</head>
+</html>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="Blue.jpg" alt="Your profile picture" class="profile-picture">
+            </h3>SIVASREE</h3>
+            <p>Computer Science Student</p>
+            </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+<div class="section-content">
+    <h2>About me</h2>
+    <p> Hello Everyone!this is Sivasree.M and I am a Computer Science student</p>
+    </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+        <h2>Education</h2>
+        <p>Womens Christian College-Bsc.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>PYTHON</li>
+                <li>ARTIFICIAL INTELLIGENCE</li>
+                <li>HTML</li>
+                <li>CLOUD COMPUTING</li>
+                <li>JAVASCRIPT</li>
+                <li>C PROGRAMMING</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">PROJECT 1</a></li>
+                <li><a href="#">PROJECT 2</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <center>
+            <div class="section-content">
+                <h2>Resume</h2>
+                <a href="RESUME.docx"class="download-button">DOWNLOAD CV</a>
+            </div>
+        </center>
+    </section>
+
+    <footer>
+        <p>&COPY; 2023 SIVASREE</p>
+    </footer>
+
+    <script>
+        document.querySelectAll('a[href^="#"]').foreach(anchor => {
+            anchor.addEventListener('click',function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollto({
+                        top: targetElement.offsetTop,
+                        behaviour: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
